@@ -21,6 +21,7 @@ button {
     width: 100vw;
     position: fixed;
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
     padding: 26px;

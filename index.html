@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link id="mycss" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="bar-top">
+    <div class="title-container">
+      <h1 class="title">BookShelf Apps</h1>
+    </div>
+    <div class="search-container">
+      <div class="search-container-2">
+        <input id="searchBookTitle" class="search-input" type="text" placeholder="search book"/>
+        <button type="submit" id="searchSubmit">
+          <label for="searchBookTitle">
+            <img class="search-logo" src="../icons/8666693_search_icon.svg" alt="search logo" />
+          </label>
+        </button>
+      </div>
+      <div class="button-toogle">
+        <button id="toogle">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+            <path
+              d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+          </svg>
+        </button>
+        <button id="toogle-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-brightness-high" viewBox="0 0 16 16">
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="input_section">
+      <h2>Masukkan Buku Baru</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul</label>
+          <input id="inputBookTitle" type="text" required />
+        </div>
+        <div class="ghost">
+          <label for="id-books">id book</label>
+          <input id="id-books" type="text" readonly />
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" type="text" required />
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun</label>
+          <input id="inputBookYear" type="number" required />
+        </div>
+        <div id="cb" class="input_inline">
+          <input id="inputBookIsComplete" type="checkbox" />
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+        </div>
+        <button id="bookSubmit" type="submit">
+          Masukkan Buku ke rak <span id="bookSubmit-span"></span>
+        </button>
+      </form>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Belum selesai dibaca</h2>
+
+      <div id="incompleteBookshelfList" class="book_list"></div>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Selesai dibaca</h2>
+
+      <div id="completeBookshelfList" class="book_list"></div>
+    </section>
+  </main>
+
+  <script src="js2.js"></script>
+</body>
+
+</html>
